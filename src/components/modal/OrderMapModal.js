@@ -26,7 +26,8 @@ function OrderMapModal({ show, handleMapClose, data, refetch }) {
 
   const fetchLocation = async () => {
     const { lng, lat } = userState.orderLocation;
-    const token = process.env.REACT_APP_MAPBOX_TOKEN;
+    const token =
+      "pk.eyJ1IjoiaWxoYW0yNSIsImEiOiJja20yczc0dm0zOWczMndwMzVmdmJ1bjI4In0.1l2Zgxjy5R0iW2SlySO_fQ";
     const apiUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?limit=1&access_token=${token}`;
 
     const api = await fetch(apiUrl);

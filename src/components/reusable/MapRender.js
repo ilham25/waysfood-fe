@@ -10,7 +10,8 @@ import { UserContext } from "../../contexts/userContext";
 
 // Global variable
 mapboxgl.workerClass = MapboxWorker;
-mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiaWxoYW0yNSIsImEiOiJja20yczc0dm0zOWczMndwMzVmdmJ1bjI4In0.1l2Zgxjy5R0iW2SlySO_fQ";
 
 export default function MapRender({ isMarker }) {
   const { state: userState, dispatch: userDispatch } = useContext(UserContext);
